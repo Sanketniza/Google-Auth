@@ -1,12 +1,14 @@
+import { SignIn } from "@clerk/clerk-react"
 
-function login() {
+function Login() {
   return (
-    <>
-        <div>
-            
-        </div>
-    </>
-  )
+        <>
+            <div>
+                <h1>Login</h1>
+                <SignIn signUpUrl="/signup" forceRedirectUrl={"/registration"}/>
+            </div>
+        </>
+    )
 }
 
-export default login
+export default Login

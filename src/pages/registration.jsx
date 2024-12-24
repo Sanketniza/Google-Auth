@@ -1,10 +1,9 @@
-
-function registration() {
+function Registration() {
   return (
         <>
-            
+            <h2>hello how are you </h2>
         </>
     )
 }
 
-export default registration
+export default Registration

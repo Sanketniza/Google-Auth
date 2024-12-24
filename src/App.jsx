@@ -1,29 +1,20 @@
-
 import './App.css'
-import {BrowserRouter as Router ,Routes ,Route} from 'react-router-dom'
-import login from './pages/login'
-import signup from './pages/signup'
-import registeration from './pages/registration'
-import { SignIn } from '@clerk/clerk-react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Login from './pages/login'
+import Signup from './pages/signup'
+import Registration from './pages/registration'
 
 function App() {
-
-
   return (
-        <>
-
-            <Router>
-                <Routes>
-                    {/* <Route path = "/" element={<h1>Home</h1>}/> */}
-                    <Route path = "login" element={login}/>
-                    <Route path = "signup" element={signup}/>
-                    <Route path = "register" element={registeration}/>
-                    <Route path = "dashboard" element={<h1>Home</h1>}/>
-                </Routes>
-            </Router>
-
-        </>
-    )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
